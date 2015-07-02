@@ -63,7 +63,7 @@ cd cyrus-sasl-$VERSION || exit 1
 zcat $CWD/cyrus-sasl.bad_elif.diff.gz | patch -p1 --verbose || exit 1
 
 # Fix for glibc-2.17 crypt() NULL return:
-zcat $CWD/cyrus-sasl-2.1.23-glibc217-crypt.diff.gz | patch -p1 --verbose || exit 1
+zcat $CWD/cyrus-sasl-2.1.26-glibc217-crypt.diff.gz | patch -p1 --verbose || exit 1
 
 chown -R root:root .
 find . -perm 777 -exec chmod 755 {} \;
